@@ -1,0 +1,9 @@
+version: 4.2.29
+session: 6805d6b5fd926217843c731d
+steps:
+  - prompt: Click "Find a Distributor" button.
+    commands:
+      - command: hover-text
+        text: FIND A DISTRIBUTOR
+        description: button in the top right corner of the webpage
+        action: click
