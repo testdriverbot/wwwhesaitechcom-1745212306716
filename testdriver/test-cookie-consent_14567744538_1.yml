@@ -1,0 +1,27 @@
+version: 4.2.29
+session: 6805d6d0fd926217843c7325
+steps:
+  - prompt: Click "Accept All" button on the cookie consent banner.
+    commands:
+      - command: hover-text
+        text: ACCEPT ALL
+        description: accept all button on the cookie consent banner
+        action: click
+  - prompt: Assert that the cookie consent banner disappears.
+    commands:
+      - command: assert
+        expect: the cookie consent banner is not visible
+  - prompt: Refresh the page.
+    commands:
+      - command: press-keys
+        keys:
+          - f5
+  - prompt: Refresh the page.
+    commands:
+      - command: press-keys
+        keys:
+          - f5
+  - prompt: Assert that the cookie banner does not reappear.
+    commands:
+      - command: assert
+        expect: the cookie consent banner is not visible
